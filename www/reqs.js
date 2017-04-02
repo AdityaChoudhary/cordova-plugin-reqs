@@ -1,26 +1,31 @@
-(function () {
-	var exec = require('cordova/exec');
+cordova.define("cordova-plugin-reqs.ReqsPlugin", function (require, exports, module) {
+	(function () {
+		var exec = require('cordova/exec');
 
-	module.exports = function (data) {
-		return new Promise(function (done, fail) {
+		module.exports = function (data, done, fail) {
+			data = data || {};
+
+			fail = fail || function () {
+					return {};
+				};
+
+			done = done || function () {
+					return {};
+				};
+
 			exec(function (resp) {
-				if (resp.status < 100 || resp.status > 599) {
-					fail(new TypeError('Network request failed'));
-					return;
+				window.test = resp;
+
+				if (resp.code < 100 || resp.code > 599) {
+					fail({data: new TypeError('Network request failed'), msgs: resp});
+				} else {
+					done(resp);
 				}
-
-				done({
-					url: resp.url,
-					status: resp.status,
-					responseText: resp.responseText,
-					getAllResponseHeaders: function () {
-						return resp.responseHeaders;
-					}
-				});
 			}, function (resp) {
-				fail(new TypeError('Network request failed'))
+				window.test = resp;
 
-			}, 'ReqsPlugin', 'gets', [data.method, data.url, '', data.headers]);
-		})
-	};
-})();
+				fail({data: new TypeError('Network request failed'), msgs: resp});
+			}, 'ReqsPlugin', 'make', [data.type || 'GET', data.path || '', data.body || '', data.head || {}]);
+		};
+	})();
+});

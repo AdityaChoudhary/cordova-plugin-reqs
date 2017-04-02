@@ -20,111 +20,80 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 public class ReqsPlugin extends CordovaPlugin {
-
-    public static final String LOG_TAG = "ReqsPlugin";
-    private static CallbackContext callbackContext;
-
-    private final OkHttpClient mClient = new OkHttpClient();
-    public static final MediaType MEDIA_TYPE_MARKDOWN = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
+    private final OkHttpClient OK_HTTP = new OkHttpClient();
 
     @Override
-    public boolean execute(final String action, final JSONArray data, final CallbackContext callbackContext) {
-        if (action.equals("gets")) {
+    public boolean execute(final String acts, final JSONArray data, final CallbackContext back) {
+        if (acts.equals("make")) {
+//            String LOGS_TAGS = "ReqsPlugin";
+
             try {
-                String method = data.getString(0);
-                Log.v(LOG_TAG, "execute: method = " + method.toString());
+                String type = data.getString(0);
+                String path = data.getString(1);
+                String body = data.getString(2);
+                JSONObject head = data.getJSONObject(3);
 
-                String urlString = data.getString(1);
-                Log.v(LOG_TAG, "execute: urlString = " + urlString.toString());
+                Request.Builder http = new Request.Builder();
 
-                String postBody = data.getString(2);
-                Log.v(LOG_TAG, "execute: postBody = " + postBody.toString());
-
-                JSONObject headers = data.getJSONObject(3);
-                if (headers.has("map") && headers.getJSONObject("map") != null) {
-                    headers = headers.getJSONObject("map");
-                }
-
-                Log.v(LOG_TAG, "execute: headers = " + headers.toString());
-
-                Request.Builder requestBuilder = new Request.Builder();
-
-                // method + postBody
-                if (postBody != null && !postBody.equals("null")) {
-                    // requestBuilder.post(RequestBody.create(MEDIA_TYPE_MARKDOWN, postBody.toString()));
-                    String contentType;
-                     if (headers.has("content-type")) {
-                         JSONArray contentTypeHeaders = headers.getJSONArray("content-type");
-                         contentType = contentTypeHeaders.getString(0);
-                     } else {
-                         contentType = "application/json";
-                     }
-                     requestBuilder.post(RequestBody.create(MediaType.parse(contentType), postBody.toString()));
+                if (body.equals("")) {
+                    http.method(type, null);
                 } else {
-                    requestBuilder.method(method, null);
-                }
+                    String mode = "application/x-www-form-urlencoded";
 
-                // url
-                requestBuilder.url(urlString);
-
-                // headers
-                if (headers != null && headers.names() != null && headers.names().length() > 0) {
-                    for (int i = 0; i < headers.names().length(); i++) {
-
-                        String headerName = headers.names().getString(i);
-                        JSONArray headerValues = headers.getJSONArray(headers.names().getString(i));
-
-                        if (headerValues.length() > 0) {
-                            String headerValue = headerValues.getString(0);
-                            Log.v(LOG_TAG, "key = " + headerName + " value = " + headerValue);
-                            requestBuilder.addHeader(headerName, headerValue);
-                        }
+                    if (head.has("content-type")) {
+                        mode = head.getString("content-type");
                     }
+
+                    http.post(RequestBody.create(MediaType.parse(mode), body));
                 }
 
-                Request request = requestBuilder.build();
+                http.url(path);
 
-                mClient.newCall(request).enqueue(new Callback() {
+                JSONArray list = head.names();
+
+                for (int i = 0; i < list.length(); i++) {
+                    String name = list.getString(i);
+                    String text = head.getString(name);
+
+                    http.addHeader(name, text);
+                }
+
+                Request reqs = http.build();
+
+                OK_HTTP.newCall(reqs).enqueue(new Callback() {
                     @Override
-                    public void onFailure(Request request, IOException throwable) {
-                        throwable.printStackTrace();
-                        callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, throwable.getMessage()));
+                    public void onFailure(Request reqs, IOException fail) {
+                        back.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, fail.getMessage()));
                     }
 
                     @Override
-                    public void onResponse(Response response) throws IOException {
+                    public void onResponse(Response resp) throws IOException {
+                        JSONObject send = new JSONObject();
 
-                        JSONObject result = new JSONObject();
                         try {
-                            Headers responseHeaders = response.headers();
+                            Headers head = resp.headers();
 
-                            result.put("url", response.request().urlString());
-                            result.put("status", response.code());
-                            result.put("responseText", response.body().string());
-                            result.put("responseHeaders", "");
+                            send.put("path", resp.request().urlString());
+                            send.put("code", resp.code());
+                            send.put("data", resp.body().string());
 
-                            if (responseHeaders != null ) {
-                                result.put("responseHeaders", responseHeaders.toString());
+                            if (head != null) {
+                                send.put("head", head.toString());
+                            } else {
+                                send.put("head", "");
                             }
-                        } catch (Exception e) {
-                            e.printStackTrace();
+                        } catch (Exception fail) {
+                            fail.printStackTrace();
                         }
 
-                        Log.v(LOG_TAG, "HTTP code: " + response.code());
-                        Log.v(LOG_TAG, "returning: " + result.toString());
-
-                        callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
+                        back.sendPluginResult(new PluginResult(PluginResult.Status.OK, send));
                     }
                 });
-
-            } catch (JSONException e) {
-                Log.e(LOG_TAG, "execute: Got JSON Exception " + e.getMessage());
-                callbackContext.error(e.getMessage());
+            } catch (JSONException fail) {
+                back.error(fail.getMessage());
             }
-
         } else {
-            Log.e(LOG_TAG, "Invalid action : " + action);
-            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.INVALID_ACTION));
+            back.sendPluginResult(new PluginResult(PluginResult.Status.INVALID_ACTION));
             return false;
         }
 
