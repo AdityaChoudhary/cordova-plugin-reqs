@@ -64,15 +64,15 @@ cordova.define("cordova-plugin-reqs.ReqsPlugin", function (require, exports, mod
 
 		Headers.prototype.getAll = function (name) {
 			return this.map[normalizeName(name)] || []
-		}
+		};
 
 		Headers.prototype.has = function (name) {
 			return this.map.hasOwnProperty(normalizeName(name))
-		}
+		};
 
 		Headers.prototype.set = function (name, value) {
 			this.map[normalizeName(name)] = [normalizeValue(value)]
-		}
+		};
 
 		Headers.prototype.forEach = function (callback, thisArg) {
 			Object.getOwnPropertyNames(this.map).forEach(function (name) {
