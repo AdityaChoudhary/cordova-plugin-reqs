@@ -1,4 +1,4 @@
-# cordova-plugin-fetch
+# cordova-plugin-reqs
 
 HTTP networking plugin that brings the [whatwg fetch spec](https://fetch.spec.whatwg.org/) standard to Cordova
 
@@ -18,9 +18,9 @@ MIT
 The plugin conforms to the Cordova plugin specification, it can be installed
 using the Cordova / Phonegap command line interface.
 
-    phonegap plugin add https://github.com/aporat/cordova-plugin-fetch.git
+    phonegap plugin add https://github.com/AdityaChoudhary/cordova-plugin-reqs.git
 
-    cordova plugin add https://github.com/aporat/cordova-plugin-fetch.git
+    cordova plugin add https://github.com/AdityaChoudhary/cordova-plugin-reqs.git
 
 ## Usage
 
@@ -29,11 +29,11 @@ The cordovaFetch function supports any HTTP method. We'll focus on GET and POST 
 ### HTML
 
 ```javascript
-cordovaFetch('/users.html')
-  .then(function(response) {
-    return response.text()
-  }).then(function(body) {
-    document.body.innerHTML = body
+reqs('http://graphlo.com/')
+  .then(function(resp) {
+    console.log(resp);
+  }).catch(function(fail) {
+    console.log(fail);
   })
 ```
 
