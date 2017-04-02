@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-fetch.FetchPlugin", function (require, exports, module) {
+cordova.define("cordova-plugin-reqs.ReqsPlugin", function (require, exports, module) {
 	/* global cordova:false */
 
 	(function () {
@@ -28,7 +28,7 @@ cordova.define("cordova-plugin-fetch.FetchPlugin", function (require, exports, m
 		}
 
 		function Headers(headers) {
-			this.map = {}
+			this.map = {};
 
 			if (headers instanceof Headers) {
 				headers.forEach(function (value, name) {
@@ -43,24 +43,24 @@ cordova.define("cordova-plugin-fetch.FetchPlugin", function (require, exports, m
 		}
 
 		Headers.prototype.append = function (name, value) {
-			name = normalizeName(name)
-			value = normalizeValue(value)
-			var list = this.map[name]
+			name = normalizeName(name);
+			value = normalizeValue(value);
+			var list = this.map[name];
 			if (!list) {
-				list = []
+				list = [];
 				this.map[name] = list
 			}
 			list.push(value)
-		}
+		};
 
 		Headers.prototype['delete'] = function (name) {
-			delete this.map[normalizeName(name)]
-		}
+			delete this.map[normalizeName(name)];
+		};
 
 		Headers.prototype.get = function (name) {
-			var values = this.map[normalizeName(name)]
+			var values = this.map[normalizeName(name)];
 			return values ? values[0] : null
-		}
+		};
 
 		Headers.prototype.getAll = function (name) {
 			return this.map[normalizeName(name)] || []
@@ -283,7 +283,7 @@ cordova.define("cordova-plugin-fetch.FetchPlugin", function (require, exports, m
 			this.url = options.url || ''
 		}
 
-		Body.call(Response.prototype)
+		Body.call(Response.prototype);
 
 		var cordovaFetch = {};
 
@@ -292,7 +292,8 @@ cordova.define("cordova-plugin-fetch.FetchPlugin", function (require, exports, m
 		cordovaFetch.Response = Response;
 
 		cordovaFetch.fetch = function (input, init) {
-			var request
+			var request;
+
 			if (Request.prototype.isPrototypeOf(input) && !init) {
 				request = input
 			} else {
@@ -303,7 +304,7 @@ cordova.define("cordova-plugin-fetch.FetchPlugin", function (require, exports, m
 				exec(function (response) {
 
 					if (response.status < 100 || response.status > 599) {
-						reject(new TypeError('Network request failed'))
+						reject(new TypeError('Network request failed'));
 						return
 					}
 
@@ -314,7 +315,7 @@ cordova.define("cordova-plugin-fetch.FetchPlugin", function (require, exports, m
 						getAllResponseHeaders: function () {
 							return response.responseHeaders;
 						}
-					}
+					};
 
 					resolve(options);
 				}, function (response) {
@@ -322,9 +323,9 @@ cordova.define("cordova-plugin-fetch.FetchPlugin", function (require, exports, m
 
 				}, "FetchPlugin", "fetch", [request.method, request.url, typeof request._bodyInit === 'undefined' ? null : request._bodyInit, request.headers]);
 			})
-		}
+		};
 
-		cordovaFetch.fetch.polyfill = true
+		cordovaFetch.fetch.polyfill = true;
 
 		module.exports = cordovaFetch.fetch;
 	})();
