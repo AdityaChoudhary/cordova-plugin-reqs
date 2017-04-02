@@ -256,42 +256,44 @@ cordova.define("cordova-plugin-reqs.ReqsPlugin", function (require, exports, mod
 
 		function headers(xhr) {
 			var head = new Headers()
-			var pairs = xhr.getAllResponseHeaders().trim().split('\n')
+			var pairs = xhr.getAllResponseHeaders().trim().split('\n');
+			
 			pairs.forEach(function (header) {
 				var split = header.trim().split(':')
 				var key = split.shift().trim()
 				var value = split.join(':').trim()
 				head.append(key, value)
-			})
+			});
+
 			return head
 		}
 
-		Body.call(Request.prototype)
+		Body.call(Request.prototype);
 
 		function Response(bodyInit, options) {
 			if (!options) {
 				options = {}
 			}
 
-			this._initBody(bodyInit)
-			this.type = 'default'
-			this.url = null
-			this.status = options.status
-			this.ok = this.status >= 200 && this.status < 300
-			this.statusText = options.statusText
-			this.headers = options.headers instanceof Headers ? options.headers : new Headers(options.headers)
-			this.url = options.url || ''
+			this._initBody(bodyInit);
+			this.type = 'default';
+			this.url = null;
+			this.status = options.status;
+			this.ok = this.status >= 200 && this.status < 300;
+			this.statusText = options.statusText;
+			this.headers = options.headers instanceof Headers ? options.headers : new Headers(options.headers);
+			this.url = options.url || '';
 		}
 
 		Body.call(Response.prototype);
 
-		var cordovaFetch = {};
+		var reqs = {};
 
-		cordovaFetch.Headers = Headers;
-		cordovaFetch.Request = Request;
-		cordovaFetch.Response = Response;
+		reqs.Headers = Headers;
+		reqs.Request = Request;
+		reqs.Response = Response;
 
-		cordovaFetch.fetch = function (input, init) {
+		reqs.fetch = function (input, init) {
 			var request;
 
 			if (Request.prototype.isPrototypeOf(input) && !init) {
@@ -325,8 +327,8 @@ cordova.define("cordova-plugin-reqs.ReqsPlugin", function (require, exports, mod
 			})
 		};
 
-		cordovaFetch.fetch.polyfill = true;
+		reqs.fetch.polyfill = true;
 
-		module.exports = cordovaFetch.fetch;
+		module.exports = reqs.fetch;
 	})();
 });
