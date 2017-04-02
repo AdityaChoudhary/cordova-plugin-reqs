@@ -17,7 +17,7 @@
     <keywords>cordova,reqs,http,networking</keywords>
 
     <js-module src="www/reqs.js" name="ReqsPlugin">
-        <clobbers target="fetch"/>
+        <clobbers target="reqs"/>
     </js-module>
 
     <!-- android -->
