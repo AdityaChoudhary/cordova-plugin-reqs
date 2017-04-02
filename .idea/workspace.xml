@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="060a0aee-0e37-4647-9e81-40125ba5b5b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java" afterPath="$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/android/dependencies.gradle" afterPath="$PROJECT_DIR$/data/android/dependencies.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/reqs.js" afterPath="$PROJECT_DIR$/www/reqs.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,16 +31,39 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
               <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+              <folding>
+                <marker date="1491116329000" expanded="true" signature="961:987" ph="{...}" />
+                <marker date="1491116329000" expanded="true" signature="1010:1036" ph="{...}" />
+                <marker date="1491116329000" expanded="true" signature="1123:1155" ph="{...}" />
+                <marker date="1491116329000" expanded="true" signature="1177:1219" ph="{...}" />
+                <marker date="1491116329000" expanded="true" signature="1240:1283" ph="{...}" />
+                <marker date="1491116329000" expanded="true" signature="1363:1441" ph="{&quot;method&quot;: 'GET'...}" />
+                <marker date="1491116329000" expanded="true" signature="1394:1438" ph="{&quot;User-Agent&quot;: 'CordovaFetch 1.0.0'...}" />
+                <marker date="1491116329000" expanded="true" signature="1557:1602" ph="{...}" />
+                <marker date="1491116329000" expanded="true" signature="1704:1752" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1491116329000" expanded="true" signature="1816:1997" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1491116329000" expanded="true" signature="1847:1925" ph="{&quot;Accept&quot;: 'application/json'...}" />
+                <marker date="1491116329000" expanded="true" signature="1950:1994" ph="{&quot;name&quot;: 'Hubot'...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReqsPlugin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1350">
+              <caret line="90" column="19" lean-forward="true" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReqsPlugin.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java">
+      <file leaf-file-name="dependencies.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/android/dependencies.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -87,9 +108,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/data/android/dependencies.gradle" />
         <option value="$PROJECT_DIR$/www/reqs.js" />
         <option value="$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java" />
+        <option value="$PROJECT_DIR$/data/android/dependencies.gradle" />
       </list>
     </option>
   </component>
@@ -294,12 +315,12 @@
       <option name="presentableId" value="Default" />
       <updated>1491115748737</updated>
       <workItem from="1491115750373" duration="2730000" />
-      <workItem from="1491118854055" duration="4016000" />
+      <workItem from="1491118854055" duration="4495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6746000" />
+    <option name="totallyTimeSpent" value="7225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -309,18 +330,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +370,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding />
+          <folding>
+            <marker date="1491116329000" expanded="true" signature="961:987" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1010:1036" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1123:1155" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1177:1219" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1240:1283" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1363:1441" ph="{&quot;method&quot;: 'GET'...}" />
+            <marker date="1491116329000" expanded="true" signature="1394:1438" ph="{&quot;User-Agent&quot;: 'CordovaFetch 1.0.0'...}" />
+            <marker date="1491116329000" expanded="true" signature="1557:1602" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1704:1752" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1491116329000" expanded="true" signature="1816:1997" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1491116329000" expanded="true" signature="1847:1925" ph="{&quot;Accept&quot;: 'application/json'...}" />
+            <marker date="1491116329000" expanded="true" signature="1950:1994" ph="{&quot;name&quot;: 'Hubot'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -385,26 +419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/android/dependencies.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -417,10 +435,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding>
+            <marker date="1491116329000" expanded="true" signature="961:987" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1010:1036" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1123:1155" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1177:1219" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1240:1283" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1363:1441" ph="{&quot;method&quot;: 'GET'...}" />
+            <marker date="1491116329000" expanded="true" signature="1394:1438" ph="{&quot;User-Agent&quot;: 'CordovaFetch 1.0.0'...}" />
+            <marker date="1491116329000" expanded="true" signature="1557:1602" ph="{...}" />
+            <marker date="1491116329000" expanded="true" signature="1704:1752" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1491116329000" expanded="true" signature="1816:1997" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1491116329000" expanded="true" signature="1847:1925" ph="{&quot;Accept&quot;: 'application/json'...}" />
+            <marker date="1491116329000" expanded="true" signature="1950:1994" ph="{&quot;name&quot;: 'Hubot'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        <state relative-caret-position="1350">
+          <caret line="90" column="19" lean-forward="true" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/android/dependencies.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
         </state>
       </provider>
