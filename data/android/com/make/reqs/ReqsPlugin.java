@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
-public class FetchPlugin extends CordovaPlugin {
+public class ReqsPlugin extends CordovaPlugin {
 
     public static final String LOG_TAG = "ReqsPlugin";
     private static CallbackContext callbackContext;
@@ -29,9 +29,7 @@ public class FetchPlugin extends CordovaPlugin {
 
     @Override
     public boolean execute(final String action, final JSONArray data, final CallbackContext callbackContext) {
-
-        if (action.equals("fetch")) {
-
+        if (action.equals("gets")) {
             try {
                 String method = data.getString(0);
                 Log.v(LOG_TAG, "execute: method = " + method.toString());
