@@ -4,7 +4,6 @@
 	module.exports = function (data) {
 		return new Promise(function (done, fail) {
 			exec(function (resp) {
-
 				if (resp.status < 100 || resp.status > 599) {
 					fail(new TypeError('Network request failed'));
 					return;
@@ -21,7 +20,7 @@
 			}, function (resp) {
 				fail(new TypeError('Network request failed'))
 
-			}, 'ReqsPlugin', 'gets', [data.method, data.url, null, data.headers]);
+			}, 'ReqsPlugin', 'gets', [data.method, data.url, '', data.headers]);
 		})
 	};
 })();
