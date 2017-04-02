@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="060a0aee-0e37-4647-9e81-40125ba5b5b0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java" afterPath="$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/android/dependencies.gradle" afterPath="$PROJECT_DIR$/data/android/dependencies.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/reqs.js" afterPath="$PROJECT_DIR$/www/reqs.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,14 +54,14 @@
       <file leaf-file-name="ReqsPlugin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="90" column="19" lean-forward="true" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+            <state relative-caret-position="678">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dependencies.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dependencies.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/android/dependencies.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -69,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reqs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reqs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/reqs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -108,9 +110,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/www/reqs.js" />
         <option value="$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java" />
         <option value="$PROJECT_DIR$/data/android/dependencies.gradle" />
+        <option value="$PROJECT_DIR$/www/reqs.js" />
       </list>
     </option>
   </component>
@@ -315,12 +317,12 @@
       <option name="presentableId" value="Default" />
       <updated>1491115748737</updated>
       <workItem from="1491115750373" duration="2730000" />
-      <workItem from="1491118854055" duration="4495000" />
+      <workItem from="1491118854055" duration="5549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7225000" />
+    <option name="totallyTimeSpent" value="8279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -427,14 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/reqs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -458,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/android/com/make/reqs/ReqsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="19" lean-forward="true" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+        <state relative-caret-position="678">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -468,6 +462,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/reqs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
           <folding />
         </state>
       </provider>

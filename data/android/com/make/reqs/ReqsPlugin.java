@@ -25,8 +25,6 @@ public class ReqsPlugin extends CordovaPlugin {
     @Override
     public boolean execute(final String acts, final JSONArray data, final CallbackContext back) {
         if (acts.equals("make")) {
-//            String LOGS_TAGS = "ReqsPlugin";
-
             try {
                 String type = data.getString(0);
                 String path = data.getString(1);
