@@ -1,5 +1,5 @@
 (function () {
-	var exec = cordova.require('cordova/exec');
+	var exec = require('cordova/exec');
 
 	module.exports = function (data) {
 		return new Promise(function (done, fail) {
