@@ -1,0 +1,32 @@
+{
+	"name": "cordova-plugin-reqs",
+	"description": "HTTP networking plugin that brings the fetch() standard to Cordova",
+	"version": "1.0.0",
+	"homepage": "https://github.com/AdityaChoudhary/cordova-plugin-reqs#readme",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:AdityaChoudhary/cordova-plugin-reqs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/AdityaChoudhary/cordova-plugin-reqs/issues"
+	},
+	"cordova": {
+		"id": "phonegap-plugin-reqs",
+		"platforms": [
+			"ios"
+		]
+	},
+	"keywords": [
+		"ecosystem:cordova",
+		"ecosystem:phonegap",
+		"cordova-ios"
+	],
+	"engines": [
+		{
+			"name": "cordova",
+			"version": ">=3.0.0"
+		}
+	],
+	"author": "Aditya Choudhary",
+	"license": "MIT"
+}

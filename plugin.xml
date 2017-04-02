@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-reqs"
+        version="1.0.0">
+    <name>Cordova Reqs</name>
+
+    <description>
+        HTTP networking plugin that brings the fetch() standard to Cordova
+    </description>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <repo>https://github.com/AdityaChoudhary/cordova-plugin-reqs.git</repo>
+    <issue>https://github.com/AdityaChoudhary/cordova-plugin-reqs/issues</issue>
+    <license>MIT</license>
+
+    <keywords>cordova,reqs,http,networking</keywords>
+
+    <js-module src="www/reqs.js" name="ReqsPlugin">
+        <clobbers target="fetch"/>
+    </js-module>
+
+    <!-- android -->
+
+    <platform name="android">
+        <framework src="data/android/dependencies.gradle" custom="true" type="gradleReference"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ReqsPlugin">
+                <param name="android-package" value="com.make.reqs.ReqsPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="data/android/com/make/reqs/ReqsPlugin.java" target-dir="src/com/make/reqs/"/>
+    </platform>
+</plugin>
