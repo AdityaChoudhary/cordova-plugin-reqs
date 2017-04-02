@@ -26,15 +26,14 @@ using the Cordova / Phonegap command line interface.
 
 The cordovaFetch function supports any HTTP method. We'll focus on GET and POST example requests.
 
-### HTML
+### Simple HTML Reqs
 
 ```javascript
-reqs('http://graphlo.com/')
-  .then(function(resp) {
+reqs('http://graphlo.com/').then(function(resp) {
     console.log(resp);
-  }).catch(function(fail) {
+}).catch(function(fail) {
     console.log(fail);
-  })
+});
 ```
 
 ### JSON
