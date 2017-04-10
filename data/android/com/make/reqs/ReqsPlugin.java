@@ -47,13 +47,15 @@ public class ReqsPlugin extends CordovaPlugin {
 
                 http.url(path);
 
-                JSONArray list = head.names();
+                if(head != null && head.length() > 0 ) {
+                    JSONArray list = head.names();
 
-                for (int i = 0; i < list.length(); i++) {
-                    String name = list.getString(i);
-                    String text = head.getString(name);
+                    for (int i = 0; i < list.length(); i++) {
+                        String name = list.getString(i);
+                        String text = head.getString(name);
 
-                    http.addHeader(name, text);
+                        http.addHeader(name, text);
+                    }
                 }
 
                 Request reqs = http.build();
