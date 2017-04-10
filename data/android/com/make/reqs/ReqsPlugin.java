@@ -58,6 +58,8 @@ public class ReqsPlugin extends CordovaPlugin {
 
                 Request reqs = http.build();
 
+                OK_HTTP.setFollowRedirects(false);
+
                 OK_HTTP.newCall(reqs).enqueue(new Callback() {
                     @Override
                     public void onFailure(Request reqs, IOException fail) {

@@ -20,8 +20,6 @@ module.exports = function (data, done, fail) {
 			done(resp);
 		}
 	}, function (resp) {
-		window.test = resp;
-
 		fail({data: new TypeError('Network request failed'), msgs: resp});
 	}, 'ReqsPlugin', 'make', [data.type || 'GET', data.path || '', data.body || '', data.head || {}]);
 };
