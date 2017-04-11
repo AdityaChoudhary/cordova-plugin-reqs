@@ -18,6 +18,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class ReqsPlugin extends CordovaPlugin {
     private final OkHttpClient OK_HTTP = new OkHttpClient();
@@ -30,6 +31,10 @@ public class ReqsPlugin extends CordovaPlugin {
                 String path = data.getString(1);
                 String body = data.getString(2);
                 JSONObject head = data.getJSONObject(3);
+
+                OK_HTTP.setConnectTimeout(60, TimeUnit.SECONDS);
+
+                OK_HTTP.setReadTimeout(60, TimeUnit.SECONDS);
 
                 Request.Builder http = new Request.Builder();
 
